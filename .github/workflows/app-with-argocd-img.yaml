@@ -74,7 +74,7 @@ jobs:
     
     - name: Commit and push changes
       run: |
-        git config --local user.email "yhy0009.ref0009@naver.com"
+        git config --local user.email "ref0009@naver.com"
         git config --local user.name "yhy0009"
         git add .
         git commit -m "Update image to latest"
