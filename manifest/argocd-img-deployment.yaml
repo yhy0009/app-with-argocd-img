@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: app-with-argocd-img
-        image: yhy0009/app-with-argocd-img:4b340f7d55fdf97adc90df7f6db5b0c773e4e44f
+        image: yhy0009/app-with-argocd-img:2c6b6c70ba9aaf1412b2618f4140d17eba98e747
