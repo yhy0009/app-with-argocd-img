@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: app-with-argocd-img
-        image: nginx
+        image: yhy0009/app-with-argocd-img
