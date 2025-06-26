@@ -8,7 +8,7 @@ public class ActionsController {
 	
 	@GetMapping(value = "/api/actions")
 	public String actionsTest() {
-		return "app-with-argocd version:0.0.1";
+		return "app-with-argocd version:0.0.2";
 	}
 	
 	@GetMapping(value = "/")
