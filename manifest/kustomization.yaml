@@ -3,5 +3,5 @@ resources:
   - argocd-img-service.yaml
 images:
   - name: nginx
-    newName: nginx
-    newTag: "1.24"
+    newName: yhy0009/app-with-argocd-img
+    newTag: "002385c"
