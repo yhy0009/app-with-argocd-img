@@ -1,7 +1,0 @@
-# resources:
-#   - argocd-img-deployment.yaml
-#   - argocd-img-service.yaml
-# images:
-#   - name: app-with-argocd-img
-#     newName: nginx
-#     newTag: 1.25
