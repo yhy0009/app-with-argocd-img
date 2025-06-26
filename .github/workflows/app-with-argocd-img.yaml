@@ -56,3 +56,25 @@ jobs:
         context: .
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ github.sha }}
+  
+  arcocd:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: main
+        token: ${{ secrets.GH_TOKEN }}
+
+    - name: Set image to latest built
+      run: |
+        sed -i "s%image: .*%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ github.sha }}%" ./manifest/argocd-img-deployment.yaml
+    
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "ref0009@naver.com"
+        git config --local user.name "yhy0009"
+        git add .
+        git commit -m "Update image to latest"
+        git push
