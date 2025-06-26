@@ -58,6 +58,7 @@ jobs:
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ github.sha }}
   
   arcocd:
+    needs: ci
     runs-on: ubuntu-latest
 
     steps:
