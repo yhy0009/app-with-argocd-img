@@ -67,14 +67,14 @@ jobs:
         ref: main
         token: ${{ secrets.GH_TOKEN }}
 
-    # - name: Set image to latest built
-    #   run: |
-    #     sed -i "s%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ github.sha }}%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:latest" ./manifest/argocd-img-deployment.yaml
-    
     - name: Set image to latest built
       run: |
-        IMAGE="${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}"
-        sed -i "s%image: .*%image: ${IMAGE}:latest%" ./manifest/argocd-img-deployment.yaml
+        sed -i "s%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ github.sha }}%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:latest" ./manifest/argocd-img-deployment.yaml
+    
+    # - name: Set image to latest built
+    #   run: |
+    #     IMAGE="${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}"
+    #     sed -i "s%image: .*%image: ${IMAGE}:latest%" ./manifest/argocd-img-deployment.yaml
     
     - name: Commit and push changes
       run: |
