@@ -2,5 +2,5 @@ resources:
   - argocd-img-deployment.yaml
   - argocd-img-service.yaml
 images:
-  - newName: yhy0009/app-with-argocd-img
+  - name: yhy0009/app-with-argocd-img
     newTag: "002385c"
