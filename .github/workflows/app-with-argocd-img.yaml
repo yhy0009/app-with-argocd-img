@@ -69,6 +69,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
+        repository: yhy0009/app-with-argocd-img-manifest
         ref: main
         token: ${{ secrets.GH_TOKEN }}
         
