@@ -1,2 +1,2 @@
-/home/runner/work/app-with-argocd-img/app-with-argocd-img/src/main/java/actions/AppWithActionsApplication.java
-/home/runner/work/app-with-argocd-img/app-with-argocd-img/src/main/java/actions/controller/ActionsController.java
+/home/runner/work/app-with-argocd-kustomize-db/app-with-argocd-kustomize-db/src/main/java/actions/AppWithActionsApplication.java
+/home/runner/work/app-with-argocd-kustomize-db/app-with-argocd-kustomize-db/src/main/java/actions/controller/ActionsController.java
